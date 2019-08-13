@@ -24,10 +24,6 @@ from sklearn.metrics import silhouette_samples, silhouette_score
 import json
 
 ########################load glove model########################
-#glove.available_files() 
-#glove_version = '840B'
-#glove_dimensions = 300
-#model = glove.load_embeddings(glove_version, dimensions=glove_dimensions)
 gloveFile = '../word_embed/glove.840B.300d.txt'
 print("Loading Glove Model")
 f = open(gloveFile,'r', encoding='utf8')
@@ -59,22 +55,6 @@ axis_fontsize = 15
 new_fname = 'Pereira_whole_list_pca_BRM_common_words'
 
 ########################START########################
-# ##load word files
-# with open(word_file) as json_file:
-#     common_words = json.load(json_file)
-
-# ##remove duplicate target words 
-# common_words_data = []
-# common_words_list = []
-# for ikey in common_words:
-#     if  common_words[ikey][0] in common_words[ikey][1:]:
-#         #print(ikey,common_words[ikey][0])
-#         common_words_data = common_words_data+common_words[ikey][1:]
-#         common_words_list = common_words_list+[ikey]*len(common_words[ikey][1:])
-#     else: 
-#         common_words_data = common_words_data+common_words[ikey]
-#         common_words_list = common_words_list+[ikey]*len(common_words[ikey])
-# print("number of words:",len(common_words_data), "number of list:",len(common_words_list) )
 common_words_df = pd.read_csv("../word_lists/concrete_words/final_common_words_BRM.csv")
 common_words = common_words_df['Word']
 
