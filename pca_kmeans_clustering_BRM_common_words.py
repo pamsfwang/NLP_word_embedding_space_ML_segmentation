@@ -41,8 +41,7 @@ print("Done.",len(model)," words loaded!")
 
 ########################specify variables########################
 #specify variables
-wordfname = 'BRM'#'Pereira_list' #'DRM_chadwick2016' #'Pereira_list_related'
-# word_file = '../word_lists/'+wordfname+'.json'
+wordfname = 'BRM'
 
 ##t-sne
 n_comp = 20
@@ -57,7 +56,7 @@ title_fontsize = 20
 axis_fontsize = 15
 
 ##new fname
-new_fname = 'Pereira_whole_list_pca_BRM_common_words' #'test_results' 
+new_fname = 'Pereira_whole_list_pca_BRM_common_words'
 
 ########################START########################
 # ##load word files
@@ -126,20 +125,6 @@ ax1.set_title('PCA components', fontsize=title_fontsize)
 ax1.set_xlabel("Components", fontsize=axis_fontsize)
 ax1.set_ylabel("PCA", fontsize=axis_fontsize)
 plt.savefig('../results/'+new_fname+'/figures/PCA_components_'+kmeans_int_method+'.jpg')
-
-
-# #1. calculate matrix C with the consine similarity for each pair of vectors
-# C = cosine_similarity(vec) #cosine similarity mtr
-# print("dimensions of cosine similarity mtr:", C.shape)
-
-# ###save data
-# Cdataframe = pd.DataFrame(C)
-# fn = '../results/'+new_fname+'/cosine_similarity_'+wordfname+'.csv'
-# Cdataframe.to_csv(fn, index = False, header=False,float_format='%g')
-
-# Cdataframe['words'] = words_label
-# fn = '../results/'+new_fname+'/word_cosine_similarity_'+wordfname+'.csv'
-# Cdataframe.to_csv(fn, index = False, header=False,float_format='%g')
 
 ###K MEANS###
 #5 k-means (k = 200) on D using squared Euclidean distance and the k-means ++ algorithm
