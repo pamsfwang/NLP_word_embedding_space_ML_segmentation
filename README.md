@@ -3,4 +3,4 @@ This is a project that aims to understand how semantic knowledge, our general kn
 
 **pca_kmeans_clustering_BRM_common_words.py**: this script performs one approach I have tried to segment word embedding (GloVe) similarity matrix into sub-clusters by k-means clustering. Because this is an unsupervised method, I use silhouette coefficients to compare clustering results using different k.
 
-**extract_bert_embeddings.ipynb**: this is a colab script. I use this script to obtain pre-trained word embeddings for BERT. The purpose of this exploratory analysis is to see how adjacent words affect semantic similarity between target words and studied words (I generated these words using GloVe for my study). 
+**extract_bert_embeddings.ipynb**: this is a colab script. I use this script to obtain pre-trained word embeddings from BERT. The purpose of this exploratory analysis is to see how adjacent words affect semantic similarity between target words and studied words (I generated these words using GloVe for my study). 
